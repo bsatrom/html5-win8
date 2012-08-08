@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+  <title>How HTML5 Makes Windows Suck Less</title>
+	
+		<meta name="description" content="A discussion of the history of the Web, and how Native support in Win8 for Web technologies is a compelling choice for developers considering the platform">
+
+		<meta name="author"
+		content="Brandon Satrom">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0.RC/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0.RC/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0.RC/js/ui.js"></script>
+
+    <!-- Win8Presentation references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+</head>
+<body>
+    <div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+
+			<div class="slides">
+				<section>
+					<h1>How HTML5 Makes Windows Suck Less</h1>
+					<h2>Brandon Satrom</h2>
+					<h3><a href="http://twitter.com/brandonsatrom">@BrandonSatrom</a></h3>
+					<h3><a href="http://www.userinexperience.com">UserInExperience.com</a></h3>
+					<h4><a href="mailto:brandon@kendoui.com">brandon@kendoui.com</a></h4>
+				</section>
+
+				<section data-state="blackout">
+					<section>
+						<h2>About Me...</h2>
+						<ul>
+							<li>Husband and Father</li>
+							<li>Austin, TX</li>
+						</ul>
+						<p></p>
+					</section>
+					<section>
+						<h2>What I work on...</h2>
+						<p></p>
+					</section>
+					<section>
+						<h2>My book...</h2>
+						<p></p>
+					</section>
+					<section>
+						<h2>HTML5.tx</h2>
+						<p></p>
+					</section>
+				</section>
+
+				<section data-state="soothe">
+					<h2>Let's clarify some terminology...</h2>	
+					<h1 class="fragment">"HTML5" <i>means</i> <br />JS + CSS + HTML5</h1>				
+				</section>
+
+				<section class="carousel">
+					<section>
+						<h1>About this presentation...</h1>	
+					</section>	
+					<section>
+						<h2>What this presentation is NOT about...</h2>					
+					</section>
+
+					<section>
+						<h2>What this presentation IS about...</h2>					
+					</section>
+
+					<section>
+						<h2>Who this presentation is for...</h2>					
+					</section>			
+				</section>
+
+				<section>
+					<h1>A Brief history of the Web</h1>					
+				</section>
+
+				<section>
+					<h1>The Web Goes Native</h1>					
+				</section>
+
+				<section>
+					<h1>The Web in Win8</h1>					
+				</section>
+
+				<section>
+					<h1>What does the Future Hold?</h1>					
+				</section>
+
+				<section>
+					<h1>Questions?</h1>
+					<h3><a href="http://twitter.com/brandonsatrom">@BrandonSatrom</a></h3>
+					<h3><a href="http://www.userinexperience.com">UserInExperience.com</a></h3>
+					<h4><a href="mailto:brandon@kendoui.com">brandon@kendoui.com</a></h4>
+				</section>
+
+				<section>
+					<h2>Resources...</h2>
+					<ul>
+						<li><a href="http://www.userinexperience.com">UserInExperience.com</a></li>
+					</ul>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Presentation progress bar -->
+			<div class="progress"><span></span></div>
+
+		</div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="lib/js/highlight.js"></script>
+    
+    <script>
+		  head.ready(function () {
+
+		    Reveal.initialize({
+		      controls: true,
+		      progress: true,
+		      history: true,
+
+		      theme: Reveal.getQueryHash().theme || 'default', // default/neon/beige
+		      transition: Reveal.getQueryHash().transition || 'concave' // default/cube/page/concave/linear(2d)
+		    });
+
+		    hljs.initHighlightingOnLoad();
+
+		  });
+
+		  // Scripts that should be loaded before initializing
+		  var scripts = [];
+            
+		  scripts.push('js/reveal.js');
+
+		  // Load the scripts and, when completed, initialize reveal.js
+		  head.js.apply(null, scripts);
+
+		</script>
+</body>
+</html>
