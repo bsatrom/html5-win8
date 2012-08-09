@@ -966,7 +966,6 @@ body {
 	background: rgba( 0, 0, 0, 0.6 );
 }
 
-
 /*********************************************
  * SPEAKER NOTES
  *********************************************/
@@ -995,6 +994,24 @@ body {
 	border-color: #5de048;
 }
 
+/*********************************************
+ * Kendo THEME
+ *********************************************/
+
+.theme-kendo .reveal a,
+.theme-kendo .reveal a:hover,
+.theme-kendo .reveal .controls a.enabled {
+	color: #E26B1D;
+}
+
+.theme-kendo .reveal .progress span,
+.theme-kendo .reveal .roll span:after {
+	background: #E26B1D;
+}
+
+.theme-kendo .reveal a.image:hover img {
+	border-color: #E26B1D;
+}
 
 /*********************************************
  * BEIGE THEME

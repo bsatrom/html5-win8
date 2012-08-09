@@ -17,8 +17,9 @@
 		
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/app.css">
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
+		
 		<script>
 			// If the query includes print-pdf we'll use the fancy print CSS
 			document.write( '<link rel="stylesheet" href="css/' + (window.location.search.match( /print-pdf/gi ) ? 'print-pdf.css' : 'print.css') + '" type="text/css" media="print">' );
@@ -44,65 +45,558 @@
 					<h4><a href="mailto:brandon@kendoui.com">brandon@kendoui.com</a></h4>
 				</section>
 
-				<section data-state="blackout">
+				<section data-state="soothe">
+					<h3>How HTML5 Makes Windows Suck Less</h3>	
+					<ul>
+						<li class="fragment">About Me</li>
+						<li class="fragment">About This Presentation</li>
+						<li class="fragment">A Brief History of the Web</li>
+						<li class="fragment">The Web Goes Native</li>
+						<li class="fragment">The Web in Windows</li>
+						<li class="fragment">What does the future hold?</li>
+					</ul>		
+				</section>
+
+				<section >
 					<section>
-						<h2>About Me...</h2>
+						<h1>Hi There</h1>
+						<img width="500px" src="http://www.reactiongifs.com/wp-content/uploads/2012/05/hello.gif" />
+					</section>
+					<section>
+						<h2>Who I am.</h2>
 						<ul>
 							<li>Husband and Father</li>
+							<li>Program Manager for <a class="kendo" href="http://www.kendoui.com">Kendo UI</a></li>
 							<li>Austin, TX</li>
 						</ul>
-						<p></p>
+						<div class="imgBlock">
+							<img src="images/benjamin.png" />
+							<img src="images/jack.png" />
+						</div>
 					</section>
 					<section>
 						<h2>What I work on...</h2>
-						<p></p>
+						<div>
+							<p><a class="kendo" href="http://www.kendoui.com">Kendo UI</a></p>
+							<img class="bare" src="images/kendoWatermark.png" />
+						</div>
+						<h3><a class="kendo" href="http://try.kendoui.com" target="_new">Enter the Dojo!</a></h3>
 					</section>
 					<section>
-						<h2>My book...</h2>
-						<p></p>
+						<h2>Buy me a Beer!</h2>
+						<div>
+							<p><a href="http://bit.ly/Win8Book">http://bit.ly/Win8Book</a></p>
+							<a href="http://bit.ly/Win8Book"><img class="bare" width="425px" src="images/win8book.png" /></a>
+						</div>
 					</section>
-					<section>
+					<section id="html5tx">
 						<h2>HTML5.tx</h2>
-						<p></p>
+						<div>
+							<p><a href="http://www.html5tx.com">HTML5tx.com</a>
+							| <a href="http://www.twitter.com/html5tx">@HTML5tx</a></p>
+							<a href="http://bit.ly/Win8Book"><img class="bare" src="images/html5tx.png" /></a>
+						</div>
 					</section>
 				</section>
 
 				<section data-state="soothe">
 					<h2>Let's clarify some terminology...</h2>	
-					<h1 class="fragment">"HTML5" <i>means</i> <br />JS + CSS + HTML5</h1>				
+					<section>
+						<div class="fragment">
+							<h1>"HTML5" <i>means</i> <br />JS + CSS + HTML5<span class="fragment">?</span></h1>	
+							<img width="" src="http://www.reactiongifs.com/wp-content/uploads/2012/07/the_dude_nope.gif" />
+						</div>
+					</section>
+
+					<section>
+						<h1>Or "The Open Web," <br/>if you prefer.</h1>
+						<embed width="350px" src="images/HTML5_Logo.svg" />
+					</section>
+
+					<aside class="notes">
+						AKA, Open Web Technologies (Also often referred to as "Modern Web Technologies"). You can pick nits if you want, but let's all agree right here that it's okay to use the term "HTML5" and be referring to more than "Semantic markup."
+					</aside>		
 				</section>
 
-				<section class="carousel">
+				<section data-state="important">
 					<section>
-						<h1>About this presentation...</h1>	
+						<h1>About this presentation...</h1>
+						<img width="400px" src="http://www.reactiongifs.com/wp-content/uploads/2012/05/wtrbi1.gif" />	
 					</section>	
 					<section>
-						<h2>What this presentation is NOT about...</h2>					
+						<h2>This presentation is <i>NOT</i> about...</h2>
+						<ul>
+							<li class="fragment"><a href="http://userinexperience.com/?p=827">Metro</a> <span class="fragment small"><i>(or whatever legally-vetted name we're supposed to use now)</i></span></li>
+							<li class="fragment">HTML VS. XAML</li>
+							<li class="fragment">JavaScript VS. C#, VB.NET or C++</li>
+						</ul><br/><br/>	
+						<div class="fragment">
+							<p>You can argue all you want, but don't do it here...</p>
+							<img width="500px" src="http://www.reactiongifs.com/wp-content/uploads/2012/07/Abandon.gif" />
+						</div>	
+ 							
+						<aside class="notes">
+							If you're here to argue with me, I'll save you the trouble. It's not going to happen, so you are free to go.
+						</aside>								
 					</section>
 
 					<section>
-						<h2>What this presentation IS about...</h2>					
+						<q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">Programming languages cannot be debated in a vacuum. Debates over the abject superiority of one language over another, out of context, is an exercise best left to drunkards, and the simple-minded.</q> 
+						<br /><br /><h3 class="fragment">- Me, Just Now.</h3>
+						<img width="350px" class="fragment" src="http://www.reactiongifs.com/wp-content/uploads/2012/02/very_interesting.gif" />		
 					</section>
 
 					<section>
-						<h2>Who this presentation is for...</h2>					
+						<h2>What this presentation <i>is</i> about...</h2>
+						<div class="fragment">How the Web has become the most <i>pervasive</i> and <i>accessible</i> development environment of our generation.<br /> <img src="http://www.reactiongifs.com/wp-content/uploads/2012/06/f1jt6b.jpg.gif" width="250px" /></div>	
+					</section>
+
+					<section>
+						<h2>Who this presentation is <i>for</i>...</h2>
+						<ul>
+							<li class="fragment">Front-end developers considering Windows</li>
+							<li class="fragment">.NET Developers considering adopting HTML5</li>
+							<li class="fragment">Anyone looking to capitalize on the "App Hype" with familiar tools...</li>							
+						</ul>		
+						<img class="fragment" width="400px" src="http://www.reactiongifs.com/wp-content/uploads/2012/05/excited4.gif" />			
 					</section>			
 				</section>
 
 				<section>
-					<h1>A Brief history of the Web</h1>					
+					<h1>Let's get started, shall we?</h1>	
+					<img width="450px" src="images/drStrangelove.gif" />				
 				</section>
 
 				<section>
-					<h1>The Web Goes Native</h1>					
+					<section>
+						<h1>A Brief history of the Web</h1>	
+						<img width="450px" src="http://www.reactiongifs.com/wp-content/uploads/2012/04/internet_surfing.gif" />	
+					</section>	
+					<section>
+						<h1>1994</h1>
+						<img src="images/PinballExpo.jpg" />
+					</section>	
+					<section>
+						<h1>1996-1998</h1>
+						<h3>Microsoft</h3>
+						<img width="75%" src="images/MS1997.png" />
+					</section>
+					<section>
+						<h1>1996-1998</h1>
+						<h3>Yahoo</h3>
+						<img width="75%" src="images/Yahoo1997.png" />
+					</section>
+					<section>
+						<h1>1996-1998</h1>
+						<h3>Google</h3>
+						<img width="75%" src="images/Google1998.png" />
+					</section>
+					<section>
+						<h1>1998-2001</h1>
+						<h3>e-Commerce</h3>
+						<img width="75%" src="images/Amazon.com.png" />
+					</section>	
+					<section>
+						<h1>2001</h1>
+						<h3>XmlHttpRequest (XHR)</h3>
+						<div class="fragment small">(Thanks, OWA!)</div>
+						<img width="70%" src="images/OWA.gif" />
+					</section>	
+					<section>
+						<h1>2005</h1>
+						<h3>AJAX</h3>
+						<div class="fragment small">(Thanks, JJG and Google!)</div>
+						<img width="75%" src="images/gMaps05.jpg" />
+					</section>	
+					<section>
+						<h1>2008+</h1>
+						<h3>HTML5</h3>
+						<div class="fragment small">(Or, the Open Web... whatevs)</div>
+						<div><embed width="450px" src="images/HTML5_Logo.svg" /></div>
+					</section>		
 				</section>
 
 				<section>
-					<h1>The Web in Win8</h1>					
+					<section>
+						<h1>So...</h1>	
+						<img width="500px" src="images/meaning.jpg" />
+						<p class="small">Image from <a href="http://www.flickr.com/photos/topgold/405559786/">http://www.flickr.com/photos/topgold/405559786/</a>. Used with permission.</p>					
+					</section>
+					<section>
+						<h1>Perhaps we've come full-circle...</h1>
+						<img src="images/Ouroboros.png" />
+						<p class="small">Image from <a href="http://en.wikipedia.org/wiki/File:Ouroboros.png">http://en.wikipedia.org/wiki/File:Ouroboros.png</a>. Used with permission.</p>
+					</section>
+					<section>
+						<h2>1997</h2>
+						<a target="_new" href="http://www.webhamster.com/"><img src="images/hamsterDance.png" width="750px" /></a>	
+						<p class="small"><a target="_new" href="http://www.webhamster.com/">WebHamster.com</a></p>					
+					</section>
+					<section>
+						<h2>2002</h2>
+						<iframe width="640" height="480" src="http://www.youtube.com/embed/s8MDNFaGfT4" frameborder="0" allowfullscreen></iframe>	
+						<p class="small"><a href="http://knowyourmeme.com/memes/peanut-butter-jelly-time">Peanut Butter Jelly Time</a></p>
+
+					</section>
+					<section>
+						<h2>2012</h2>
+						<iframe width="640" height="480" src="http://www.youtube.com/embed/QH2-TGUlwu4" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen></iframe>
+
+						<p class="small"><a href="http://nyan.cat">NYAN.CAT</a></p>
+					</section>					
 				</section>
 
 				<section>
-					<h1>What does the Future Hold?</h1>					
+					<section>
+						<h1>Maybe...</h1>
+						<h3 class="fragment">But its not that simple</h3>
+						<p class="fragment">We have come full-circle yes, but <i>not</i> back to the earlier days of the web itself...</p>
+						<br /><br /><h3 class="fragment">Consider the following...</h3>
+					</section>
+
+					<section>
+						<img width="65%" src="images/StreetsTrips.png" />
+					</section>
+
+					<section>
+						<img width="85%" src="images/GMaps2012.png" />					
+					</section>
+
+					<section>
+						<img width="75%" src="images/MSPaint.jpg" />						
+					</section>
+
+					<section>
+						<h3>So, This...</h3>
+						<img width="75%" src="images/CanvasPaint.png" />
+						<p class="small"><a href="http://sigilmaster.com/">Canvas Paint</a></p>						
+					</section>
+
+					<section>
+						<h3>But Really, More Like This...</h3>
+						<img width="85%" src="images/Sketchpad.png" />	
+						<p class="small"><a href="http://mudcu.be/sketchpad/">Sketchpad</a> by <a href="https://twitter.com/mudcube">@mudcube</a><p>
+					</section>
+
+					<section>
+						<div><p>
+							<strong>Lett's Law:</strong>
+							<q>All programs evolve until they can <i>send email</i>.</q>
+						</p></div>
+						<div class="fragment"><p>
+							<strong>Zawinski's Law:</strong>
+							<q>All programs evolve until they can <i>read email</i>.</q>
+						</p></div>
+						<div class="fragment"><p>
+							<strong>Furrygoat's Law:</strong>
+							<q>Every program attempts to expand until it can read <i>RSS feeds</i>.</q>
+						</p></div>
+						<div class="fragment"><p>
+							<strong>Bakun's Law:</strong>
+							<q>Every program attempts to expand until it <i>integrates with twitter</i>.</q>
+						</p></div>
+						<div class="fragment"><p>
+							<strong>Satrom's Law:</strong>
+							<q>Every program attempts to expand until it <i>becomes an operating system</i>.</q>
+						</p></div>			
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>The Web Goes Native</h1>
+						<img width="100%" src="http://cache.gawker.com/assets/images/8/2009/12/avatar-2.jpg" />
+
+						<aside class="notes">
+							Not only has the web become a platform capable of doing much of what our desktops can do today, but web technologies are making their way back into our native platforms...
+						</aside>
+					</section>
+					<section>
+						<h1>Mobile Waxes, the Desktop Wanes</h1>
+						<img src="http://dl.dropbox.com/u/409429/presentations/toster-2012/img/computing_market_share.jpeg" />
+						<p class="small"><a href="http://asymco.com">Asymco</a></p>
+					</section>	
+					<section>
+						<h2>You <i>Could</i> Learn Obj-C</h2>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 5px;">// Photo.h 
+#import &lt;Cocoa/Cocoa.h&gt;
+    
+@interface Photo : NSObject {
+    NSString* caption;
+    NSString* photographer;
+}
+- (NSString*) caption;
+- (NSString*) photographer;
+
+- (void) setCaption: (NSString*)input;
+- (void) setPhotographer: (NSString*)input;
+@end 
+
+// Photo.m
+#import "Photo.h"
+
+@implementation Photo    
+- (NSString*) caption {
+    return caption;
+}
+
+- (NSString*) photographer {
+    return photographer;
+}
+@end</code></pre>
+						<aside class="notes">
+							- Why don't people just learn Obj-C or Java?
+					        - No one is building for just one app store.
+					        - Few have the time to learn that many languages well enough to build the same app for multiple environments natively.
+					        - I don't want to do desktop or mobile development… not really. I want to do web development.
+						</aside>
+					</section>
+					<section>
+						<h2>Or, Just use JavaScript</h2>
+						<pre><code contenteditable style="font-size: 18px; margin-top: 5px;">var Photo = function() {
+  var _caption, _photographer;
+
+  var photo = {
+    setCaption: function(caption) {
+      _caption = caption;
+    },
+    setPhotographer: function(photographer) {
+      _photographer = photographer;
+    }
+  }
+
+  return photo;
+}
+
+var myPhoto = Photo();
+myPhoto.setCaption("Lunch, with Lens-Flare");
+myPhoto.setPhotographer("Burke Holland");</code></pre>
+					</section>
+					<section>
+						<img width="80%" src="http://www.reactiongifs.com/wp-content/uploads/2012/06/W7Tcv.gif" />
+					</section>
+					<section>
+						<h1>No, Seriously...</h1>
+					</section>
+					<section>
+						<blockquote  cite="http://en.wikipedia.org/wiki/Parkinson's_law">Work expands so as to fill the time available for its completion.</blockquote>&mdash; Cyril Parkinson, <a href="http://en.wikipedia.org/wiki/Parkinson's_law">Parkinson's Law</a>
+						<br/><img class="square" src="images/Parkinson.jpg" />
+						<br /><br /><h3 class="fragment">Or, Putting it another way...</h3>
+					</section>
+					<section>
+						<blockquote class="twitter-tweet tw-align-left" width="350">Corollary to Parkinson's Law: give a smart developer a simple task, and he will <i>complicate it until he is challenged</i>.</blockquote>&mdash; <a href="https://twitter.com/jessitron/status/231418522318802944" data-datetime="2012-08-03T15:57:29+00:00">Jessica Kerr (@jessitron)</a>
+						<br/><img width="100px" class="square" src="https://twimg0-a.akamaihd.net/profile_images/1607832623/jessitron.jpg" />
+						<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<br /><br />
+						<h3 class="fragment">We Developers <span class="emph">Do</span> love Complexity.</h3>
+						<h3 class="fragment">But simplicity <span class="emph">always</span> wins out...</h3>
+					</section>		
+					<section>
+						<q style="font-size: .8em;" cite="http://www.w3.org/DesignIssues/Principles.html">Computer Science spent the last forty years making languages which were as powerful as possible. Nowadays we have to appreciate the reasons for picking not the most powerful solution but the least powerful. <i>The less powerful the language, the more you can do with the data stored in that language. If you write it in a simple declarative from, anyone can write a program to analyze it.</i> If, for example, a web page with weather data has RDF describing that data, a user can retrieve it as a table, perhaps average it, plot it, deduce things from it in combination with other information. At the other end of the scale is the weather information portrayed by the cunning Java applet. While this might allow a very cool user interface, it cannot be analyzed at all. The search engine finding the page will have no idea of what the data is or what it is about. The only way to find out what a Java applet means is to set it running in front of a person.</q> <br/>- Tim Berners-Lee, <a href="http://www.w3.org/DesignIssues/Principles.html">The Principle of Least Power</a>
+					</section>
+					<section>
+						<blockquote cite="http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html">Any application that can be written in <i>JavaScript</i>, will eventually be written in <i>JavaScript</i>.</blockquote> <br/>- Jeff Atwood, <a href="http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html">Atwood's Law</a>
+						<br/><img class="square" src="https://twimg0-a.akamaihd.net/profile_images/2052442590/coding-horror-official-logo-medium.png" />
+					</section>	
+					<section>
+						<blockquote cite="http://www.userinexperience.com">Any platform with mainstream adoption will eventually enable applications to be written <i>using web technologies</i>.</blockquote> <br/>- <a href="http://www.userinexperience.com">Satrom's Corollary</a>
+						<br/><img width="200px" class="square" src="https://twimg0-a.akamaihd.net/profile_images/1893810898/bsatrom-house.jpg" />
+					</section>		
+					<section>
+						<h2>Ok, using "HTML5" to write Mobile apps... Awesome.</h2>
+						<div class="fragment"?
+							<h2>But, How?</h2><br />
+							<img src="http://www.reactiongifs.com/wp-content/uploads/2012/01/I_has_a_sad.gif" />
+						</div>
+					</section>
+					<section>
+						<h2>PhoneGap</h2>
+						<img width="80%" src="images/phonegap.png" />	
+					</section>	
+					<section>
+						<h2>Titanium</h2>
+						<img width="90%" src="images/Titanium.png" />	
+					</section>
+					<section>
+						<h2><a class="kendo" href="http://try.kendoui.com/mobile/listview/4" target="_new">Kendo UI Mobile</a></h2>
+						<img class="bare" src="images/kendoWatermark.png" />
+					</section>
+					<section>
+						<h1>Also...</h1>
+						<div class="fragment">
+							<h3>You <i>Could</i> Use Windows 8</h3>
+							<img src="http://www.hdiphonewallpaper.com/uploads/image/Logo/Burning%20windows%208%20logo.jpg" />
+						</div>
+					</section>
+					<section>
+						<img width="80%" src="http://www.reactiongifs.com/wp-content/uploads/2012/06/W7Tcv.gif" />
+					</section>
+					<section>
+						<h1>No, Seriously...</h1>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>The Web in Win8</h1>
+						<img width="70%" src="http://www.reactiongifs.com/wp-content/uploads/2012/06/homer_lurking.gif" />	
+					</section>
+					<section>
+						<h1>Possible vs. <br />"In the Platform"</h1>
+					</section>	
+					<section>
+						<h1>iOS, Android &amp; WP</h1>
+						<p>It's <i>possible</i> to build apps for iOS, Android and WP using Web Technologies today... <span class="fragment emph">with a little help.</span></p>
+						<br /><p class="fragment">What's more...</p>
+						<ul>
+							<li class="fragment">You need per-API plug-ins</li>
+							<li class="fragment">There's an intermediate, compile/build step</li>
+							<li class="fragment">The underlying platform can be a <a href="http://www.moneytoolkit.com/2012/04/apple-ios-html5-localstorage-is-broken/">moving target</a></li>
+						</ul>
+					</section>
+					<section>
+						<h1>Windows 8</h1>
+						<p>HTML5, JavaScript and CSS are <span class="emph">in the platform</span></p>
+						<br /><p class="fragment">That means...</p>
+						<ul>
+							<li class="fragment">You get <span class="emph">native</span> API support</li>
+							<li class="fragment">There's no intermediary</li>
+							<li class="fragment">The underlying platform provides official support for development with web technologies.</li>
+						</ul>
+					</section>					
+				</section>
+
+				<section>
+					<section>
+						<h1>Web Technologies in Windows</h1>
+						<h3>Some features I love about the platform...</h3>
+						<img width="50%" src="images/the_carlton.gif" />	
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>HTML5 Features</h1>
+						<embed width="550px" src="images/HTML5_Logo.svg" />	
+					</section>
+					<section>
+						<h2>Semantic Markup</h2>
+						<pre><code></code></pre>	
+					</section>
+					<section>
+						<h2>data-* Attributes</h2>
+						<pre><code></code></pre>	
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>CSS3 Features</h1>
+						<embed width="550px" src="images/html5_css3_styling.svg" />	
+					</section>
+					<section>
+						<h2>Layout</h2>
+						<pre><code></code></pre>	
+					</section>
+					<section>
+						<h2>Animations</h2>
+						<pre><code></code></pre>	
+					</section>
+					<section>
+						<h2>Icon Fonts</h2>
+						<pre><code></code></pre>	
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>JavaScript Features</h1>
+						<img class="bare" width="50%" src="images/jsLogo.png" />	
+					</section>
+					<section>
+						<h2>WinJS</h2>
+						<pre><code></code></pre>	
+					</section>
+					<section>
+						<h2>WinJS - XHR</h2>
+						<pre><code></code></pre>	
+					</section>
+					<section>
+						<h2>WinJS - Animations</h2>
+						<pre><code></code></pre>	
+					</section>
+					<section>
+						<h2>Promises</h2>
+						<h4 class="fragment">Async that doesn't... a-suck?</h4>
+						<pre><code></code></pre>	
+					</section>
+					<section>
+						<h2>WinRT Projections</h2>
+						<h4 class="fragment">What's <span class="strike">old</span> COM is <span class="strike">new</span> COM again!</h4>
+						<pre><code></code></pre>	
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>What does the Future Hold?</h1>		
+						<img width="50%" src="images/amazing.gif" />
+					</section>
+					<section>
+						<iframe width="800" height="600" src="http://bl.ocks.org/d/1123639/" frameborder="0" allowfullscreen></iframe>
+						<p class="small"><a href="http://bl.ocks.org/1123639">Rounded Rectangles Demo, D3.js</a><p>
+					</section>
+					<section>
+						<iframe width="800" height="600" src="http://bl.ocks.org/d/1353700/" frameborder="0" allowfullscreen></iframe>
+						<p class="small"><a href="http://bl.ocks.org/1353700">Epicyclic Gearing, D3.js</a><p>
+					</section>
+					<section>
+						<h2>Or Maybe...</h2>
+						<ul>
+							<li class="fragment"><a href="http://www.w3.org/TR/battery-status/">Battery Status API</a></li>
+							<li class="fragment"><a href="http://www.w3.org/TR/notifications/">Desktop Notifications</a></li>
+							<li class="fragment"><a href="https://wiki.mozilla.org/GamepadAPI">Gamepad API</a></li>
+							<li class="fragment"><a href="http://www.webrtc.org/">Device Access (webRTC)</a></li>
+							<li class="fragment">And More!!!</li>
+						</ul>
+					</section>
+					<section>
+						<h2>ChromeOS</h2>
+						<img src="images/chromebox.jpg" />
+						<p class="small"><a href="http://www.google.com/intl/en/chrome/devices/features.html">Google's ChromeOS</a></p>
+					</section>	
+					<section>
+						<h3>Boot2Gecko / FirefoxOS</h3>
+						<img src="images/b2g.jpg" />
+						<p class="small"><a href="https://wiki.mozilla.org/B2G">Mozilla's Boot2Gecko Project</a></p>
+					</section>	
+					<section>
+						<img src="images/keepcalm.png" />
+					</section>								
+				</section>
+
+				<section>
+					<h1>Your Mission...</h1>		
+					<section>
+						<h2 class="fragment">Don't <i>just</i> adopt <span class="emph">iOS</span>...</h2>
+						<h3 class="fragment">...or <span class="emph">Android</span>...</h3>
+						<h3 class="fragment">...or <span class="emph">Windows</span>...</h3>
+					</section>
+					<section>
+						<h2>Do this...</h2>
+						<ol>
+						<li class="fragment">Be a Web Developer first...</li>
+						<li class="fragment">Let the platforms come to you...</li>
+						<li class="fragment">Profit!</li>
+					</ol>
+						<img class="fragment" width="50%" src="images/omg.gif" />
+					</section>
+				</section>
+
+				<section>
+					<h1>The Web is your best bet.</h1>
+					<br />
+					<h3 class="fragment">Now, go make something awesome... for all the things.</h3>
 				</section>
 
 				<section>
@@ -110,13 +604,7 @@
 					<h3><a href="http://twitter.com/brandonsatrom">@BrandonSatrom</a></h3>
 					<h3><a href="http://www.userinexperience.com">UserInExperience.com</a></h3>
 					<h4><a href="mailto:brandon@kendoui.com">brandon@kendoui.com</a></h4>
-				</section>
-
-				<section>
-					<h2>Resources...</h2>
-					<ul>
-						<li><a href="http://www.userinexperience.com">UserInExperience.com</a></li>
-					</ul>
+					<img class="bare" width="500px" src="images/hipSpider.png" />
 				</section>
 			</div>
 
