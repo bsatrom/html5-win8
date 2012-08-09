@@ -451,7 +451,7 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
 						<ul>
 							<li class="fragment">You need per-API plug-ins</li>
 							<li class="fragment">There's an intermediate, compile/build step</li>
-							<li class="fragment">The underlying platform can be a <a href="http://www.moneytoolkit.com/2012/04/apple-ios-html5-localstorage-is-broken/">moving target</a></li>
+							<li class="fragment">The underlying platform can be a <a href="http://www.moneytoolkit.com/2012/04/apple-ios-html5-localstorage-is-broken/" target="_new">moving target</a></li>
 						</ul>
 					</section>
 					<section>
@@ -506,7 +506,7 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
 						<h2><a href="http://www.w3.org/TR/2010/WD-html5-20101019/elements.html#embedding-custom-non-visible-data-with-the-data-attributes">data-* Attributes</a></h2>
 						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">&lt;div id="imgTemplate" data-win-control="WinJS.Binding.Template">
   &lt;figure>
-    &lt;img data-win-bind="src: url" />
+    &lt;img src="#" data-win-bind="src: url" alt="My image" />
     &lt;figcaption>
       &lt;span data-win-bind="textContent: caption">&lt;/span>
       &lt;div data-win-control="WinJS.UI.Rating">&lt;/div>
@@ -519,6 +519,7 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
   data-win-options="{itemDataSource: Photos.imageList.dataSource, 
     itemTemplate: select('#imgTemplate')}">
 &lt;/div></code></pre>	
+					<p>Plus, it's <a href="http://validator.nu/" target="_new">valid HTML</a></p>
 					</section>
 				</section>
 
@@ -539,7 +540,7 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
   -ms-grid-column: 2;
   -ms-grid-row: 2;
 }</code></pre>
-                        <img width="65%" src="images/grid.png" style="position: relative; top: -150px; left: 150px;" />	
+                        <img width="65%" class="expand" src="images/grid.png" style="position: relative; top: -150px; left: 150px;" />	
 					</section>
                     <section>
 						<h2><a href="http://w3c.org/TR/css3-flexbox">Flexbox</a></h2>
@@ -552,7 +553,7 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
   -ms-flex-pack: center;
   -ms-flex-align: middle;
 }</code></pre>
-                        <img width="65%" src="images/flexbox.png" style="position: relative; top: -150px; left: 200px;" />	
+                        <img width="65%" class="expand" src="images/flexbox.png" style="position: relative; top: -150px; left: 200px;" />	
 					</section>
                     <section>
 						<h2>Media Queries</h2>
@@ -569,7 +570,7 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
     -ms-flex-align: right;
   }
 }</code></pre>
-                        <img width="35%" src="images/media-queries.png" style="position: relative; top: -350px; left: 350px;" />	
+                        <img width="35%" class="expand" src="images/media-queries.png" style="position: relative; top: -350px; left: 350px;" />	
 					</section>
 					<section>
 						<h2>Animations</h2>
@@ -603,7 +604,7 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
 					</section>
 					<section>
 						<h2>WinJS</h2>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">// Namespaces and Classes
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">// Namespaces and Classes
 WinJS.Namespace.define("Game", {
   GameState = WinJS.Class.define(null, {
     config: {
@@ -629,14 +630,14 @@ WinJS.Utilities.ready(callback); // Runs on DOMContentLoaded
 					</section>
 					<section>
 						<h2>WinJS - XHR</h2>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">WinJS.xhr({ url: this.feed.url })
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">WinJS.xhr({ url: this.feed.url })
   .done(processPosts.bind(this), downloadError.bind(this));
 
 //Process each post returned from the feed
 function processPosts(request) {
   var items = request.responseXML.selectNodes("//item");
   
-  for (var i = 0, len = items.length; i < len; i++) {
+  for (var i = 0, len = items.length; i &lt; len; i++) {
     var item = items[i];
     var parent = document.createElement("div");
     appendDiv(parent, item.selectNodes("title")[0].text, "postTitle");
@@ -648,7 +649,7 @@ function processPosts(request) {
 					</section>
 					<section>
 						<h2>WinJS - Animations</h2>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">//Animate a Page Element
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">//Animate a Page Element
 var originalImg = document.querySelector("#original");
 WinJS.UI.Animation.fadeIn(originalImg);
 WinJS.UI.Animation.fadeOut(originalImg);
@@ -662,7 +663,7 @@ WinJS.UI.Animation.enterPage([[main], [source, target]], null);</code></pre>
 					<section>
 						<h2>Promises</h2>
 						<h4 class="fragment">Async that doesn't... a-suck?</h4>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">function changeHandler(e) {
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">function changeHandler(e) {
     var input = e.target;
     var resDiv = document.getElementById("divResult");
 
@@ -680,14 +681,15 @@ WinJS.UI.Animation.enterPage([[main], [source, target]], null);</code></pre>
         logDiv.innerText = "Request Complete";
     }
 
-    WinJS.xhr({url: e.target.value}).then(fulfilled, error).done(log);
+    WinJS.xhr({url: e.target.value}).then(fulfilled, error)
+      .done(log);
 }</code></pre>	
 					</section>
 					<section>
 						<h2>WinRT Projections</h2>
 						<h4 class="fragment">What's <span class="strike">old</span> COM is <span class="strike">new</span> COM again!</h4>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">function initPrint() {
-  var printing = Windows.GraphicsImaging;
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">function initPrint() {
+  var printing = Windows.Graphics.Imaging;
   var printManager = printing.getForCurrentView();
 
   function print (printEvent) {
@@ -702,7 +704,7 @@ WinJS.UI.Animation.enterPage([[main], [source, target]], null);</code></pre>
                     <section>
 						<h2>WinRT Projections (Cont'd)</h2>
 						<h3>File Storage</h3>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">function pickImage() {
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">function pickImage() {
   var targetImage = document.querySelector('img#targetMedia');
  
   var pickers = Windows.Storage.Pickers;
@@ -722,7 +724,7 @@ WinJS.UI.Animation.enterPage([[main], [source, target]], null);</code></pre>
                     <section>
 						<h2>WinRT Projections (Cont'd)</h2>
                         <h3>Light Sensor API</h3>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">var lightSensor = Windows.Devices.Sensors.LightSensor.getDefault();
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">var lightSensor = Windows.Devices.Sensors.LightSensor.getDefault();
 lightSensor.reportInterval = lightSensor.minimumReportInterval;
 
 var reading = lightSensor.getCurrentReading(); //Obtains single reading
@@ -763,7 +765,7 @@ accelerometer.addEventListener('shaken', function (e) {
                     <section>
 						<h2>WinRT Projections (Cont'd)</h2>
                         <h3>Compass</h3>
-						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">var compassDataLabel = document.getElementById('compassData');
+						<pre><code contenteditable style="font-size: 20px; margin-top: 5px;">var compassDataLabel = document.getElementById('compassData');
 var reading;
 var compass = Windows.Devices.Sensors.Compass.getDefault();
 

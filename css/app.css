@@ -6,6 +6,10 @@
     font-style: normal;
 }
 
+.reveal pre {
+	width: 110%;
+}
+
 .imgBlock img {
 	display: inline;
 	width: 45%;
@@ -63,6 +67,10 @@ q i, blockquote i, span.emph {
 .reveal span.strike {
 	text-decoration: line-through;
 	opacity: .5;
+}
+
+.reveal img.expand:hover {
+	-webkit-transform: scale(1.5);
 }
 
 .reveal img.square {
