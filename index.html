@@ -387,7 +387,6 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
 					<section>
 						<blockquote class="twitter-tweet tw-align-left" width="350">Corollary to Parkinson's Law: give a smart developer a simple task, and he will <i>complicate it until he is challenged</i>.</blockquote>&mdash; <a href="https://twitter.com/jessitron/status/231418522318802944" data-datetime="2012-08-03T15:57:29+00:00">Jessica Kerr (@jessitron)</a>
 						<br/><img width="100px" class="square" src="https://twimg0-a.akamaihd.net/profile_images/1607832623/jessitron.jpg" />
-						<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 						<br /><br />
 						<h3 class="fragment">We Developers <span class="emph">Do</span> love Complexity.</h3>
 						<h3 class="fragment">But simplicity <span class="emph">always</span> wins out...</h3>
@@ -482,30 +481,118 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
 					</section>
 					<section>
 						<h2>Semantic Markup</h2>
-						<pre><code></code></pre>	
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">&lt;header role="banner">
+  &lt;h1 class="win-title">Tom8to&lt;/h1>
+&lt;/header>
+&lt;section role="main">
+  &lt;div data-win-control="WinJS.UI.ViewBox">
+    &lt;div class="fixedlayout">
+      &lt;div id="playMain">
+        &lt;div class="icon-play" id="play" title="Start the timer">&lt;/div>
+      &lt;/div>
+      &lt;div class="countdown hidden">
+        &lt;div id="pauseContainer">
+          &lt;div id="pause" class="icon-pause med">&lt;/div>
+        &lt;/div>
+        &lt;div id="reset" class="icon-refresh med">&lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/section>
+
+&lt;div>&lt;audio id="alarm" msAudioCategory="BackgroundCapableMedia">&lt;/audio>&lt;/div></code></pre>	
 					</section>
 					<section>
-						<h2>data-* Attributes</h2>
-						<pre><code></code></pre>	
+						<h2><a href="http://www.w3.org/TR/2010/WD-html5-20101019/elements.html#embedding-custom-non-visible-data-with-the-data-attributes">data-* Attributes</a></h2>
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">&lt;div id="imgTemplate" data-win-control="WinJS.Binding.Template">
+  &lt;figure>
+    &lt;img data-win-bind="src: url" />
+    &lt;figcaption>
+      &lt;span data-win-bind="textContent: caption">&lt;/span>
+      &lt;div data-win-control="WinJS.UI.Rating">&lt;/div>
+    &lt;/figcaption>
+  &lt;/figure>
+&lt;/div>
+
+&lt;h1>Metro Photo Gallery&lt;/h1>
+&lt;div id="imageContainer" data-win-control="WinJS.UI.ListView" 
+  data-win-options="{itemDataSource: Photos.imageList.dataSource, 
+    itemTemplate: select('#imgTemplate')}">
+&lt;/div></code></pre>	
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h1>CSS3 Features</h1>
-						<embed width="550px" src="images/html5_css3_styling.svg" />	
+						<embed width="50%" width="550px" src="images/html5_css3_styling.svg" />	
 					</section>
 					<section>
-						<h2>Layout</h2>
-						<pre><code></code></pre>	
+						<h2><a href="http://www.w3.org/TR/css3-grid-layout">Grid Layout</a></h2>
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">body {		
+  display: -ms-grid;
+  -ms-grid-columns: 100px 1fr;
+  -ms-grid-rows: 133px 1fr 20px;
+}
+
+#imageContainer {
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+}</code></pre>
+                        <img width="65%" src="images/grid.png" style="position: relative; top: -150px; left: 150px;" />	
+					</section>
+                    <section>
+						<h2><a href="http://w3c.org/TR/css3-flexbox">Flexbox</a></h2>
+                        <pre><code contenteditable style="font-size: 16px; margin-top: 5px;">#imageContainer {
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+
+  display:  -ms-flex;
+  -ms-flex-direction: row;	
+  -ms-flex-pack: center;
+  -ms-flex-align: middle;
+}</code></pre>
+                        <img width="65%" src="images/flexbox.png" style="position: relative; top: -150px; left: 200px;" />	
+					</section>
+                    <section>
+						<h2>Media Queries</h2>
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">@media screen and (-ms-view-state: fullscreen-portrait) {	
+  #imgContainer {
+    -ms-flex-direction: column;
+    -ms-flex-pack: start;
+  }
+}
+
+@media screen and (-ms-view-state: snapped) {	
+  #imgContainer {
+    -ms-flex-direction: column;
+    -ms-flex-align: right;
+  }
+}</code></pre>
+                        <img width="35%" src="images/media-queries.png" style="position: relative; top: -350px; left: 350px;" />	
 					</section>
 					<section>
 						<h2>Animations</h2>
-						<pre><code></code></pre>	
-					</section>
-					<section>
-						<h2>Icon Fonts</h2>
-						<pre><code></code></pre>	
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">@keyframes slide {  
+    from {
+        transform: translateX(1%);
+    }    
+    50% {
+        color: #E26B1D;
+    }
+    to {  
+      transform: translateX(80%);
+    }  
+}
+
+#animate:before {
+   animation-duration: 3s;  
+   animation-name: slide;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+}</code></pre>
+                        <div id="animate" class="smiley"></div>	
 					</section>
 				</section>
 
@@ -516,25 +603,184 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
 					</section>
 					<section>
 						<h2>WinJS</h2>
-						<pre><code></code></pre>	
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">// Namespaces and Classes
+WinJS.Namespace.define("Game", {
+  GameState = WinJS.Class.define(null, {
+    config: {
+      frameRate: 20, // Set to 0 to have no update loop at all
+      currentPage: "/html/homePage.html",
+      gameName: "Irate Pigeons", // Used by share contract on scores page.
+  })
+});
+
+//Navigation
+WinJS.Navigation.forward(1);
+WinJS.Navigation.navigate(location, initialState);
+
+//UI Controls
+var rating = new WinJS.UI.Rating(element, options);
+var listView = new WinJS.UI.ListView(parentObject, options);
+var datePicker = new WinJS.UI.DatePicker(element, options);
+
+// Utilities
+WinJS.Utilities.addClass(element, "nyan");
+WinJS.Utilities.ready(callback); // Runs on DOMContentLoaded
+</code></pre>	
 					</section>
 					<section>
 						<h2>WinJS - XHR</h2>
-						<pre><code></code></pre>	
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">WinJS.xhr({ url: this.feed.url })
+  .done(processPosts.bind(this), downloadError.bind(this));
+
+//Process each post returned from the feed
+function processPosts(request) {
+  var items = request.responseXML.selectNodes("//item");
+  
+  for (var i = 0, len = items.length; i < len; i++) {
+    var item = items[i];
+    var parent = document.createElement("div");
+    appendDiv(parent, item.selectNodes("title")[0].text, "postTitle");
+    appendDiv(parent, item.selectNodes("pubDate")[0].text, "postDate");
+    appendDiv(parent, item.selectNodes("description")[0].text, "postContent");
+    this.section.appendChild(parent);
+  }
+}</code></pre>	
 					</section>
 					<section>
 						<h2>WinJS - Animations</h2>
-						<pre><code></code></pre>	
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">//Animate a Page Element
+var originalImg = document.querySelector("#original");
+WinJS.UI.Animation.fadeIn(originalImg);
+WinJS.UI.Animation.fadeOut(originalImg);
+
+//Animate Page Transitions
+var main = document.querySelector('.fragment');
+var source = document.querySelector('#source');
+var target = document.querySelector('#target');
+WinJS.UI.Animation.enterPage([[main], [source, target]], null);</code></pre>	
 					</section>
 					<section>
 						<h2>Promises</h2>
 						<h4 class="fragment">Async that doesn't... a-suck?</h4>
-						<pre><code></code></pre>	
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">function changeHandler(e) {
+    var input = e.target;
+    var resDiv = document.getElementById("divResult");
+
+    function fulfilled (result) {
+        resDiv.style.backgroundColor = "lightGreen";
+        resDiv.innerText = "Success";
+    }
+
+    function error(e) {
+        resDiv.style.backgroundColor = "red";
+        resDiv.innerText = "Error";
+    }
+
+    function log() {
+        logDiv.innerText = "Request Complete";
+    }
+
+    WinJS.xhr({url: e.target.value}).then(fulfilled, error).done(log);
+}</code></pre>	
 					</section>
 					<section>
 						<h2>WinRT Projections</h2>
 						<h4 class="fragment">What's <span class="strike">old</span> COM is <span class="strike">new</span> COM again!</h4>
-						<pre><code></code></pre>	
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">function initPrint() {
+  var printing = Windows.GraphicsImaging;
+  var printManager = printing.getForCurrentView();
+
+  function print (printEvent) {
+    printEvent.request.createPrintTask("Print Blog", function (args) {
+      args.setSource(MSApp.getHtmlPrintDocumentSource(document));
+    }).done(log);
+  }
+
+  printManager.addEventListener('printtaskrequested', print);  
+}</code></pre>	
+					</section>
+                    <section>
+						<h2>WinRT Projections (Cont'd)</h2>
+						<h3>File Storage</h3>
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">function pickImage() {
+  var targetImage = document.querySelector('img#targetMedia');
+ 
+  var pickers = Windows.Storage.Pickers;
+  var picker = new pickers.FileOpenPicker();
+  picker.viewMode = pickers.PickerViewMode.thumbnail;
+  picker.suggestedStartLocation = pickers.PickerLocationId.picturesLibrary;
+  picker.fileTypeFilter.replaceAll([".png", ".jpg", ".jpeg", ".tiff", ".gif"]);
+
+  picker.pickSingleFileAsync().done(function (file) {
+    if (file) {
+      var objUrl = window.URL.createObjectURL(file, false);
+      targetImage.src = objUrl;
+    }
+  });
+}</code></pre>	
+					</section>
+                    <section>
+						<h2>WinRT Projections (Cont'd)</h2>
+                        <h3>Light Sensor API</h3>
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">var lightSensor = Windows.Devices.Sensors.LightSensor.getDefault();
+lightSensor.reportInterval = lightSensor.minimumReportInterval;
+
+var reading = lightSensor.getCurrentReading(); //Obtains single reading
+
+// Fires each time the reading changes
+lightSensor.addEventListener('readingchanged', function (event) {
+  var lux = event.reading.illuminanceInLux.toFixed(2);
+  document.getElementById('light').innerText = lux;
+  adjustStylesheet(lux);
+});
+
+function adjustStylesheet(lux) {
+  if (lux > 1000 || lux < 40) {
+    WinJS.Utilities.addClass(document.body, 'light');
+  } else {
+    WinJS.Utilities.removeClass(document.body, 'light');
+  }
+}</code></pre>	
+					</section>
+                    <section>
+						<h2>WinRT Projections (Cont'd)</h2>
+                        <h3>Accelerometer</h3>
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">var accelerometer = Windows.Devices.Sensors.Accelerometer.getDefault(); 
+var accelData = document.getElementById('accelData');
+
+accelerometer.addEventListener('readingchanged', function (event) {
+  var accelData = document.getElementById('accelData');
+  accelData.innerText = "X: " + event.reading.accelerationX.toFixed(4) + 
+    " | Y: " + event.reading.accelerationY.toFixed(4) + 
+    " | Z: " + event.reading.accelerationZ.toFixed(4);    
+});
+
+accelerometer.addEventListener('shaken', function (e) {
+  var accelData = document.getElementById('accelData');
+  accelData.innerText = "You SHOOK me!";
+});</code></pre>	
+					</section>
+                    <section>
+						<h2>WinRT Projections (Cont'd)</h2>
+                        <h3>Compass</h3>
+						<pre><code contenteditable style="font-size: 16px; margin-top: 5px;">var compassDataLabel = document.getElementById('compassData');
+var reading;
+var compass = Windows.Devices.Sensors.Compass.getDefault();
+
+if (compass) {
+  compass.addEventListener("readingchanged", function (event) {
+    reading = event.reading;
+    var heading = reading. headingMagneticNorth !== null ? 
+      reading. headingMagneticNorth.toFixed(2) : 
+      reading.headingTrueNorth.toFixed(2);
+    compassDataLabel.innerText = heading;
+    rotateCompass(heading);
+  });
+
+  reading = compass.getCurrentReading();
+  compassDataLabel.innerText = reading.headingMagneticNorth || 
+    reading.headingTrueNorth;
+}</code></pre>	
 					</section>
 				</section>
 

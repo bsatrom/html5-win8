@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'Heydings';
+	src: url('../lib/font/heydings_icons-webfont.woff') format('woff'), 
+         url('../lib/font/heydings_icons.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .imgBlock img {
 	display: inline;
 	width: 45%;
@@ -64,3 +72,78 @@ q i, blockquote i, span.emph {
 
 	border-radius: 10px;
 }
+
+@keyframes slide {  
+    from {
+        transform: translateX(1%);
+    }
+    
+    50% {
+        color: #E26B1D;
+    }
+
+    to {  
+      transform: translateX(70%);
+    }  
+}
+
+@-webkit-keyframes slide {  
+    from {
+        -webkit-transform: translateX(1%);
+    }
+    
+    50% {
+        color: #E26B1D;
+    }
+
+    to {  
+      -webkit-transform: translateX(70%);
+    }  
+}
+
+#animate {
+	background-color: #877777;
+	color: #F7F3F3;
+	border-radius: 10px;
+	height: 150px;
+    width: 500px;
+	text-align: center;
+	margin: 20px;
+    
+    position: relative;
+    top: -350px;
+    left: 400px;
+}
+
+#animate:before {
+	font-size: 96pt;
+	font-family: Heydings;
+	color: #F3F3F3;
+	width: 100%;
+	display: block;
+}
+
+#animate:before {
+   padding-left: 10px;
+   padding-right: 10px;
+   text-align: left;
+   margin-top: 50px;
+   position: relative;
+   top: 50px;
+    
+   animation-duration: 3s;  
+   animation-name: slide;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-in-out;
+   
+   -webkit-animation-duration: 3s;  
+   -webkit-animation-name: slide;
+   -webkit-animation-direction: alternate;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: ease-in-out;
+}
+
+#animate.smiley:before {
+     content: 'y';    
+} 
