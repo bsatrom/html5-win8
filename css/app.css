@@ -1,0 +1,66 @@
+.imgBlock img {
+	display: inline;
+	width: 45%;
+}
+
+.imgBlockLarge {
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.imgBlockLarge img {
+	display: inline;
+	height: 80%;
+}
+
+.reveal section img.bare, .reveal section img.special {
+	border: none;
+	box-shadow: none;
+	background: none;
+}
+
+.reveal section img.special {
+	position: absolute;
+	top: -30%;
+}
+
+.reveal section  a.kendo {
+	color: #E26B1D;
+}
+
+.reveal section span.small, .reveal section p.small {
+	font-size: 12pt;
+}
+
+.reveal section div.small {
+	margin-top: -1.5em;
+	font-size: 14pt;
+}
+
+.kendo .state-background {
+	background: rgba( 255, 127, 0, 0.4);
+}
+.important .state-background {
+	background: rgba( 49, 27, 182, 0.3);
+}
+
+embed {
+	margin-top: 20px;
+}
+
+q i, blockquote i, span.emph {
+	color: #71E9F4;
+}
+
+.reveal span.strike {
+	text-decoration: line-through;
+	opacity: .5;
+}
+
+.reveal img.square {
+	border: none;
+	box-shadow: none;
+	background: none;
+
+	border-radius: 10px;
+}
