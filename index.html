@@ -700,6 +700,7 @@ WinJS.UI.Animation.enterPage([[main], [source, target]], null);</code></pre>
 
   printManager.addEventListener('printtaskrequested', print);  
 }</code></pre>	
+					<img width="65%" class="expand" src="images/printing.png" />
 					</section>
                     <section>
 						<h2>WinRT Projections (Cont'd)</h2>
@@ -720,6 +721,7 @@ WinJS.UI.Animation.enterPage([[main], [source, target]], null);</code></pre>
     }
   });
 }</code></pre>	
+						<img width="45%" class="expand" src="images/storage.png" style="position: relative; top: -200px; left: 500px;" />
 					</section>
                     <section>
 						<h2>WinRT Projections (Cont'd)</h2>
@@ -737,12 +739,13 @@ lightSensor.addEventListener('readingchanged', function (event) {
 });
 
 function adjustStylesheet(lux) {
-  if (lux > 1000 || lux < 40) {
+  if (lux > 1000 || lux &lt; 40) {
     WinJS.Utilities.addClass(document.body, 'light');
   } else {
     WinJS.Utilities.removeClass(document.body, 'light');
   }
 }</code></pre>	
+						<img width="55%" class="expand" src="images/lightSensor.png" style="position: relative; top: -300px; left: 500px;" />
 					</section>
                     <section>
 						<h2>WinRT Projections (Cont'd)</h2>
@@ -761,6 +764,7 @@ accelerometer.addEventListener('shaken', function (e) {
   var accelData = document.getElementById('accelData');
   accelData.innerText = "You SHOOK me!";
 });</code></pre>	
+						<img width="55%" class="expand" src="images/Accelerometer.png" style="position: relative; top: -200px; left: 400px;" />
 					</section>
                     <section>
 						<h2>WinRT Projections (Cont'd)</h2>
@@ -783,6 +787,7 @@ if (compass) {
   compassDataLabel.innerText = reading.headingMagneticNorth || 
     reading.headingTrueNorth;
 }</code></pre>	
+						<img width="35%" class="expand" src="images/compass.png" style="position: relative; top: -250px; left: 500px;" />
 					</section>
 				</section>
 
