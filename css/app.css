@@ -96,7 +96,7 @@ q i, blockquote i, span.emph {
 }
 
 @-webkit-keyframes slide {  
-    from {
+    0% {
         -webkit-transform: translateX(1%);
     }
     
@@ -104,10 +104,25 @@ q i, blockquote i, span.emph {
         color: #E26B1D;
     }
 
-    to {  
+    100% {  
       -webkit-transform: translateX(70%);
     }  
 }
+
+@-moz-keyframes slide {  
+    from {
+        -moz-transform: translateX(1%);
+    }
+    
+    50% {
+        color: #E26B1D;
+    }
+
+    to {  
+      -moz-transform: translateX(70%);
+    }  
+}
+
 
 #animate {
 	background-color: #877777;
@@ -145,11 +160,17 @@ q i, blockquote i, span.emph {
    animation-iteration-count: infinite;
    animation-timing-function: ease-in-out;
    
-   -webkit-animation-duration: 3s;  
    -webkit-animation-name: slide;
+   -webkit-animation-duration: 3s;  
    -webkit-animation-direction: alternate;
    -webkit-animation-iteration-count: infinite;
    -webkit-animation-timing-function: ease-in-out;
+
+   -moz-animation-duration: 3s;  
+   -moz-animation-name: slide;
+   -moz-animation-direction: alternate;
+   -moz-animation-iteration-count: infinite;
+   -moz-animation-timing-function: ease-in-out;
 }
 
 #animate.smiley:before {
