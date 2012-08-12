@@ -524,6 +524,22 @@ myPhoto.setPhotographer("Burke Holland");</code></pre>
 &lt;/div></code></pre>	
 					<p>Plus, it's <a href="http://validator.nu/" target="_new">valid HTML</a></p>
 					</section>
+					<section>
+						<h2>SVG</h2>
+						<pre><code>&lt;embed src="images/HTML5_Logo.svg" /&gt;</code></pre>						
+						<div>Adjust Size: <input type="range" min="50" max="2000" value="300" id="logoSize" /></div>
+						<embed id="html5Logo" src="images/HTML5_Logo.svg" />
+					</section>
+					<script>
+						var logo = document.getElementById('html5Logo');
+						var slider = document.getElementById('logoSize');
+
+						logo.width = slider.value;
+
+						slider.addEventListener('change', function() {
+							logo.width = slider.value;
+						});
+					</script>
 				</section>
 
 				<section>
@@ -794,7 +810,7 @@ if (compass) {
 					</section>
 				</section>
 
-				<section>
+				<section data-state="soothe">
 					<section>
 						<h1>What does the Future Hold?</h1>		
 						<img width="50%" src="images/amazing.gif" />
@@ -832,7 +848,7 @@ if (compass) {
 					</section>								
 				</section>
 
-				<section>
+				<section data-state="important">
 					<h1>Your Mission...</h1>		
 					<section>
 						<h2 class="fragment">Don't <i>just</i> adopt <span class="emph">iOS</span>...</h2>
